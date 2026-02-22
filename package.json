@@ -1,0 +1,17 @@
+{
+  "name": "tone-clod",
+  "version": "1.0.0",
+  "description": "Claude Code skill that plays a notification sound when user input is needed",
+  "main": "play-sound.js",
+  "scripts": {
+    "test": "node play-sound.js"
+  },
+  "keywords": [
+    "claude",
+    "skill",
+    "notification",
+    "sound"
+  ],
+  "author": "elinielvaldez",
+  "license": "MIT"
+}

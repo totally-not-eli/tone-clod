@@ -1,0 +1,12 @@
+{
+  "name": "tone-clod",
+  "version": "1.0.0",
+  "description": "Plays a notification sound when Claude needs user input",
+  "author": "elinielvaldez",
+  "hooks": {
+    "on-ask-user-question": {
+      "command": "node play-sound.js",
+      "description": "Plays notification sound when user input is needed"
+    }
+  }
+}
