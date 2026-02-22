@@ -23,7 +23,7 @@ ln -s /path/to/tone-clod tone-clod
 This skill uses Claude Code's `on-ask-user-question` hook to trigger a notification sound whenever Claude uses the `AskUserQuestion` tool.
 
 The sound played depends on your operating system:
-- **macOS**: Plays the "Glass" system sound
+- **macOS**: Plays the "Hero" system sound at 200% volume
 - **Linux**: Tries PulseAudio, ALSA, or beep
 - **Windows**: Plays the notify.wav system sound
 - **Fallback**: Terminal bell character
@@ -39,11 +39,24 @@ node play-sound.js
 
 ## Customization
 
-Want a different sound? Edit `play-sound.js` and change the sound file path:
+### Change the volume
+
+Edit `play-sound.js` and adjust the `-v` flag (0.0 to 2.0):
+
+```javascript
+// Volume examples:
+command = 'afplay -v 1.0 /System/Library/Sounds/Hero.aiff';  // Normal volume
+command = 'afplay -v 2.0 /System/Library/Sounds/Hero.aiff';  // 200% (current)
+command = 'afplay -v 0.5 /System/Library/Sounds/Hero.aiff';  // Quieter
+```
+
+### Change the sound
+
+Edit `play-sound.js` and change the sound file path:
 
 ```javascript
 // macOS example - change to any .aiff or .wav file
-command = 'afplay /System/Library/Sounds/Ping.aiff';
+command = 'afplay -v 2.0 /System/Library/Sounds/Ping.aiff';
 ```
 
 ### Available macOS System Sounds

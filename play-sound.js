@@ -13,8 +13,9 @@ function playNotificationSound() {
 
   switch (platform) {
     case 'darwin': // macOS
-      // Use afplay with system notification sound
-      command = 'afplay /System/Library/Sounds/Glass.aiff';
+      // Use afplay with volume at max (2.0 = 200%)
+      // Using Hero.aiff - a louder, more attention-grabbing sound
+      command = 'afplay -v 2.0 /System/Library/Sounds/Hero.aiff';
       break;
 
     case 'linux':
